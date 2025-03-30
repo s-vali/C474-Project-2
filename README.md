@@ -32,6 +32,24 @@ multi_agent_chatbot/
 └── README.md
 ```
 
+### Architecture Overview
+
+**Agents**
+<br> _General Agent_: Handles generic queries.
+<br> _Admissions Agent_: Specializes in answering questions about Concordia University's Computer Science admissions.
+<br> _AI Agent_: Focuses on AI-related questions and topics.
+
+**Core Components**
+<br> _Router Agent_: Detects user intent and delegates to the appropriate specialized agent.
+<br> _Memory Management_: LangChain’s memory modules for maintaining session context.
+<br> _External Knowledge_: Wikipedia API or other APIs for up-to-date info.
+
+**Tech Stack**
+<br> _LLM Backend_: Ollama (e.g., running LLaMA, Mistral, etc.)
+<br> _LangChain_: Agent routing, memory, prompt templates.
+<br> _FastAPI_: RESTful API interface.
+<br> _Python_: Core logic and orchestration.
+
 <img width="443" alt="Screenshot 2025-03-29 at 10 08 56 PM" src="https://github.com/user-attachments/assets/e858b7d5-e9c7-410e-9a0c-221f2bd90b8a" />
 
 ### Execution guide
