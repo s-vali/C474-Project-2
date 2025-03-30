@@ -1,5 +1,5 @@
-fastapi # to deploy the chatbot
-uvicorn # to run fastapi
-langchain # memory and prompt engineering
-wikipedia #  external APIs knowledge integration
-ollama # to query LLMs
+fastapi
+uvicorn
+langchain
+wikipedia
+ollama
