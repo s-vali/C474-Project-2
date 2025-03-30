@@ -8,7 +8,7 @@ Bhavya Bugude
 <br> Sana Antoun 40209806
 <br> Omar Alshanyour 40209637 
 
-### Architecture and Design
+### Breakdown
 ```
 multi_agent_chatbot/
 ├── agents/
@@ -24,7 +24,11 @@ multi_agent_chatbot/
 │   └── knowledge_integration.py
 ├── config/
 │   └── settings.py
+├── technical_report.txt
+├── execution_guide.txt
 ├── requirements.txt
+├── demo_video.txt
+├── performance_evaluation.txt
 └── README.md
 ```
 
