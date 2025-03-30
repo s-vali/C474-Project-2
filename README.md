@@ -1,2 +1,4 @@
-# C474-Project-2
+# C474 Project 2
 Adaptive Multi-Agent Chatbot System using Ollama
+
+<br> Sofia Valiante 40191897
