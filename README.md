@@ -67,8 +67,7 @@ Steps to run
     <br> (In your IDE terminal)
     - run `uvicorn api.main:app --reload` (where uvicorn is the command to run the file found at api.main of the project directory).
     - open a browser and enter the link `http://127.0.0.1:8000/docs` to access SwaggerUI.
-    <br> (Alternatively)
-    - run `.\api\main.py` in your IDE which will open a connection with SwaggerUI 
+    - _(Alternatively)_ run `.\api\main.py` in your IDE which will open a connection with SwaggerUI 
 
 3. Now that FastAPI is running, we can use our chatbots
     - Navigate to the POST /chat endpoint on the webpage.
