@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from agents.general_agent import handle_general_query
 import uvicorn
 from agents.router import route_query
 
@@ -13,7 +12,7 @@ class ChatRequest(BaseModel):
 # Define route API endpoint
 @app.get("/")
 def read_root():
-    return {"message": "Multi-Agent Chatbot is running."}
+    return {"message": "Multi-Agent Chatbot System is running."}
 
 # Multi-Agent chat endpoint
 @app.post("/chat")
