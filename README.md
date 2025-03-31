@@ -50,7 +50,7 @@ Run the following command to install the necessary dependencies:
     `pip install fastapi uvicorn langchain ollama wikipedia pydantic langchain_ollama langchain-community`
 or run the command in the terminal
     `pip install -r .\docs\requirements.tsx`. 
-If the IDE still cannot recognize the libraries and packages, install them independently, refresh your Python Interpreter or using the IDE suggestions.
+If the IDE still cannot recognize the libraries and packages, install them independently, using the IDE suggestions or refresh your Python Interpreter.
 
 
 Steps to run 
