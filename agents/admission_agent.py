@@ -1,8 +1,9 @@
 from langchain.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
+from config.settings import *
 
 # Instantiate llm using longchain
-llm = OllamaLLM(model="mistral") # can replace with any model
+llm = OllamaLLM(model=MODEL) # can replace with any model
 
 # Define the template for the LLMs prompt and description of its role
 template = """
