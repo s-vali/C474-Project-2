@@ -37,7 +37,7 @@ multi_agent_chatbot/
 Run the following command to install the necessary dependencies:
     `pip install fastapi uvicorn langchain ollama wikipedia`
 or run the command in the terminal
-    `pip install -r .\requirements.tsx`
+    `pip install -r .\docs\requirements.tsx`
 If the IDE still cannot recognize the libraries and packages, install them independently or using the IDE suggestions.
 
 
