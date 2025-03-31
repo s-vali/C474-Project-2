@@ -96,7 +96,3 @@ Steps to run:
 <br> _FastAPI_: RESTful API interface.
 <br> _Python_: Core logic and orchestration.
 
-<img width="443" alt="Screenshot 2025-03-29 at 10 08 56 PM" src="https://github.com/user-attachments/assets/e858b7d5-e9c7-410e-9a0c-221f2bd90b8a" />
-
-### Execution guide
-
