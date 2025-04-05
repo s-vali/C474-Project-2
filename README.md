@@ -96,23 +96,6 @@ Steps to run
 4. When your done, close everything
     - Stop running the FastAPI in your IDE terminal.
     - Stop running Ollama.
-  
-```
-from langchain_core.messages import HumanMessage
-
-chat_history = []
-
-question = "What is Task Decomposition?"
-ai_msg_1 = rag_chain.invoke({"input": question, "chat_history": chat_history})
-chat_history.extend([HumanMessage(content=question), ai_msg_1["answer"]])
-
-second_question = "What are common ways of doing it?"
-ai_msg_2 = rag_chain.invoke({"input": second_question, "chat_history": chat_history})
-
-print(ai_msg_2["answer"])
-```
-<img width="900" alt="Screenshot 2025-03-30 at 10 54 16 PM" src="https://github.com/user-attachments/assets/80e5efa6-5814-491c-9552-71b360c4f103" />
-
 
 
 ### Architecture Overview
