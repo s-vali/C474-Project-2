@@ -68,7 +68,7 @@ Steps to run
 [IF YOU HAVE ALREADY DOWNLOADED THE MODEL]
 1. Run Ollama by clicking its application icon in your local environment.
 
-2. Run the FastAPI (which you will be querying the chatbots, and therefore, the LLms)
+2. Run the FastAPI (the resource in which you will be querying the agents with)
     <br> (In your IDE terminal)
     - run `uvicorn api.main:app --reload` (where uvicorn is the command to run the file found at api.main of the project directory).
     - open a browser and enter the link `http://127.0.0.1:8000/docs` to access SwaggerUI.
