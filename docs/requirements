@@ -3,6 +3,5 @@ uvicorn
 langchain
 wikipedia
 ollama
-pydantic
 langchain_ollama
 langchain-community
