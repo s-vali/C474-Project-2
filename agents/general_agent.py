@@ -1,16 +1,8 @@
-#from langchain_community.llms import Ollama
-#from langchain.llms import Ollama
-#from langchain.chains.LLMChain import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
 from config.settings import *
 
-'''
-Also works:
-from memory.memory_manager import memory
-llm = Ollama(model="mistral")
-general_agent = LLMChain(llm=llm, prompt=prompt, memory=memory)
-'''
+'''General Agent'''
 
 # Instantiate llm using longchain
 llm = OllamaLLM(model=MODEL) # can replace with any model

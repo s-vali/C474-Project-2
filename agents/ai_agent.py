@@ -2,6 +2,8 @@ from langchain.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
 from config.settings import *
 
+'''AI Agent'''
+
 # Instantiate llm using longchain
 llm = OllamaLLM(model=MODEL) # can replace with any model
 

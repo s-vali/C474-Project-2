@@ -1,3 +1,10 @@
+
+"""
+THIS FILE HAS BEEN MOVED TO api/main.py
+PLEASE USE api/main.py
+THIS FILE WILL BE DELETED
+"""
+
 '''
 from fastapi import FastAPI, HTTPException
 from langchain.memory import ConversationBufferMemory
