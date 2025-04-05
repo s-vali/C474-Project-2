@@ -1,3 +1,4 @@
 from langchain.memory import ConversationBufferMemory
 
-memory = ConversationBufferMemory(return_messages=True) # currently not being used
+# Initialize memory for multi-turn conversations
+memory = ConversationBufferMemory(return_messages=True)

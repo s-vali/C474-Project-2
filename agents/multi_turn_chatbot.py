@@ -1,7 +1,7 @@
+'''
 from fastapi import FastAPI, HTTPException
 from langchain.memory import ConversationBufferMemory
-#from agents.router import route_query
-from .router import route_query
+from agents.router import route_query
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -39,3 +39,4 @@ def get_history():
     :return: List of past interactions.
     """
     return {"history": memory.load_memory_variables(inputs={}).get("history", [])}
+'''
