@@ -63,6 +63,7 @@ Steps to run
       by clicking its application icon in your local environment.
     - Run the command `ollama pull mistral` to download the model `mistral` from the internet. It may take some time and make sure you have the space on your computer for it. `Mistral` is a smaller LLM and will be used in the project. 
     - Confirm that the model is downloaded with the command `ollama list` and view the model.
+    - Run Ollama by clicking its application icon in your local environment.
 
 [IF YOU HAVE ALREADY DOWNLOADED THE MODEL]
 1. Run Ollama by clicking its application icon in your local environment.
