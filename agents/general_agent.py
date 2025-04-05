@@ -34,4 +34,3 @@ general_chain = prompt | llm
 def handle_general_query(query: str, context: str) -> str: # for now, context="None yet."
     print(f"this is general_agent --> query: '{query}', context: '{context}'")
     return general_chain.invoke({"input": query, "context": context}) # field matches the input_variable defined in the PromptTemplate
-

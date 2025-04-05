@@ -19,7 +19,7 @@ def chat(input_text: str):
     """
     try:
         # Retrieve conversation history to provide context
-        conversation_history = memory.load_memory_variables().get("history", [])
+        conversation_history = memory.load_memory_variables(inputs={}).get("history", [])
 
         # Route the query to the appropriate agent
         response = route_query(query=input_text, context=conversation_history)
@@ -38,4 +38,4 @@ def get_history():
     Retrieves the conversation history.
     :return: List of past interactions.
     """
-    return {"history": memory.load_memory_variables().get("history", [])}
+    return {"history": memory.load_memory_variables(inputs={}).get("history", [])}

@@ -1,3 +1,3 @@
 from langchain.memory import ConversationBufferMemory
 
-memory = ConversationBufferMemory() # currently not being used
+memory = ConversationBufferMemory(return_messages=True) # currently not being used
