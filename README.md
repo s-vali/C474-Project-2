@@ -56,12 +56,16 @@ If the IDE still cannot recognize the libraries and packages, install them indep
 Steps to run 
 <br> _(this may be changed as the project progresses)_:
 
+[IF YOU HAVE NOT DOWNLOADED THE MODEL]
 1. Pull the LLMs you will be using from Ollama
-    <br> (In a terminal outside of your IDE)
+    <br> (In your computer's terminal)
     - Run the command `ollama` to confirm it is installed. Alternatively, you may run Ollama
       by clicking its application icon in your local environment.
     - Run the command `ollama pull mistral` to download the model `mistral` from the internet. It may take some time and make sure you have the space on your computer for it. `Mistral` is a smaller LLM and will be used in the project. 
     - Confirm that the model is downloaded with the command `ollama list` and view the model.
+
+[IF YOU HAVE ALREADY DOWNLOADED THE MODEL]
+1. Run Ollama by clicking its application icon in your local environment.
 
 2. Run the FastAPI (which you will be querying the chatbots, and therefore, the LLms)
     <br> (In your IDE terminal)
