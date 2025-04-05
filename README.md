@@ -42,7 +42,7 @@ _(this may be changed as the project progresses)_
 - langchain
 - wikipedia
 - ollama
-- pydantic
+- [REMOVED] pydantic
 - langchain_ollama
 - langchain-community
 
