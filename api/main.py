@@ -2,9 +2,9 @@ from agents.router import route_query
 from fastapi import FastAPI, HTTPException
 from memory.memory_manager import memory
 
-'''Multi Turn Conversation'''
+'''Multi Turn Chatbot Conversation'''
 
-# Initialize FastAPI app
+# Initialize FastAPI appz
 app = FastAPI()
 
 # Main chatbot logic

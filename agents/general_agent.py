@@ -3,12 +3,7 @@ from langchain_ollama.llms import OllamaLLM
 from config.settings import *
 from utils.knowledge_integration import fetch_wikipedia_summary
 
-'''
-Also works:
-from memory.memory_manager import memory
-llm = Ollama(model="mistral")
-general_agent = LLMChain(llm=llm, prompt=prompt, memory=memory)
-'''
+'''General Agent'''
 
 # Instantiate llm using longchain
 llm = OllamaLLM(model=MODEL) # can replace with any model
@@ -29,7 +24,7 @@ prompt = PromptTemplate(input_variables=["input", "context"], template=template)
 general_chain = prompt | llm
 
 # Return LLM server response based on user query input
-def handle_general_query(query: str, context: []) -> str: # for now, context="None yet."
+def handle_general_query(query: str, context: []) -> str:
     print(f"this is general_agent --> query: '{query}', context: '{context}'")
 
     # Try fetching additional context from Wikipedia

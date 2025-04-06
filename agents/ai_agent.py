@@ -24,7 +24,7 @@ prompt = PromptTemplate(input_variables=["input", "context"], template=template)
 ai_chain = prompt | llm
 
 # Return LLM server response based on user query input
-def handle_ai_query(query: str, context: []) -> str: # for now, context="None yet."
+def handle_ai_query(query: str, context: []) -> str:
     print(f"this is ai_agent --> query: '{query}', context: '{context}'")
 
     # Try fetching additional context from Wikipedia
