@@ -1,8 +1,14 @@
 from langchain.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
 from config.settings import *
+from utils.knowledge_integration import fetch_wikipedia_summary
 
-'''General Agent'''
+'''
+Also works:
+from memory.memory_manager import memory
+llm = Ollama(model="mistral")
+general_agent = LLMChain(llm=llm, prompt=prompt, memory=memory)
+'''
 
 # Instantiate llm using longchain
 llm = OllamaLLM(model=MODEL) # can replace with any model
@@ -25,4 +31,10 @@ general_chain = prompt | llm
 # Return LLM server response based on user query input
 def handle_general_query(query: str, context: []) -> str: # for now, context="None yet."
     print(f"this is general_agent --> query: '{query}', context: '{context}'")
-    return general_chain.invoke({"input": query, "context": context}) # field matches the input_variable defined in the PromptTemplate
+
+    # Try fetching additional context from Wikipedia
+    external_context = fetch_wikipedia_summary(query)
+    combined_context = f"{context}\n\n{external_context}" if external_context else context
+
+    return general_chain.invoke({"input": query, "context": combined_context}) # field matches the input_variable defined in the PromptTemplate
+

@@ -1,6 +1,7 @@
 from langchain.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
 from config.settings import *
+from utils.knowledge_integration import fetch_wikipedia_summary
 
 '''AI Agent'''
 
@@ -25,4 +26,9 @@ ai_chain = prompt | llm
 # Return LLM server response based on user query input
 def handle_ai_query(query: str, context: []) -> str: # for now, context="None yet."
     print(f"this is ai_agent --> query: '{query}', context: '{context}'")
-    return ai_chain.invoke({"input": query, "context": context}) # field matches the input_variable defined in the PromptTemplate
+
+    # Try fetching additional context from Wikipedia
+    external_context = fetch_wikipedia_summary(query)
+    combined_context = f"{context}\n\n{external_context}" if external_context else context
+
+    return ai_chain.invoke({"input": query, "context": combined_context}) # field matches the input_variable defined in the PromptTemplate
