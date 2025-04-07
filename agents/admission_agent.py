@@ -12,6 +12,7 @@ llm = OllamaLLM(model=MODEL) # can replace with any model
 template = """
 You are an assistant to answer questions about the admission process to Concordia University's Computer Science program. 
 Context: {context} 
+Relevant external knowledge: {knowledge_base}
 Question: {input} 
 Answer: Let's think step by step.
 """
@@ -34,7 +35,6 @@ def handle_admission_query(query: str, context: []) -> str:
     print(f"this is admission_agent --> query: '{query}', context: '{context}'")
 
     # Try fetching additional context from Wikipedia
-    external_context = fetch_wikipedia_summary(query)
-    combined_context = f"{context}\n\n{external_context}" if external_context else context
+    knowledge = fetch_wikipedia_summary(query)
 
-    return admission_chain.invoke({"input": query, "context": combined_context}) # field matches the input_variable defined in the PromptTemplate
+    return admission_chain.invoke({"input": query, "context": context, "knowledge_base": knowledge or "None"}) # field matches the input_variable defined in the PromptTemplate
