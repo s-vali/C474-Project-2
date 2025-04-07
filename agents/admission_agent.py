@@ -20,11 +20,17 @@ Answer: Let's think step by step.
 prompt = PromptTemplate(input_variables=["input", "context"], template=template)
 
 # Chain everything together
-# ... here we can also chain context
 admission_chain = prompt | llm
 
 # Return LLM server response based on user query input
 def handle_admission_query(query: str, context: []) -> str:
+    """
+    Return LLM response based on user query input for Concordia Admissions
+    :param query: user query string
+    :param context: chatbot history and query context
+    :return: agent's response to query
+    """
+
     print(f"this is admission_agent --> query: '{query}', context: '{context}'")
 
     # Try fetching additional context from Wikipedia

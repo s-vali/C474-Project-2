@@ -20,11 +20,17 @@ Answer: Let's think step by step.
 prompt = PromptTemplate(input_variables=["input", "context"], template=template)
 
 # Chain everything together
-# ... here we can also chain context
 ai_chain = prompt | llm
 
 # Return LLM server response based on user query input
 def handle_ai_query(query: str, context: []) -> str:
+    """
+    Return LLM response based on user query input for AI
+    :param query: user query string
+    :param context: chatbot history and query context
+    :return: agent's response to query
+    """
+
     print(f"this is ai_agent --> query: '{query}', context: '{context}'")
 
     # Try fetching additional context from Wikipedia

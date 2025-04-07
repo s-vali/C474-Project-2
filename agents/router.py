@@ -4,8 +4,15 @@ from agents.admission_agent import handle_admission_query
 
 '''Routing to relevant agent'''
 
-# Handle routing to relevant agent to answer user's input
 def route_query(query: str, context: []):
+    """
+    Handle routing to relevant agent to answer user's input
+
+    :param query: user input
+    :param context: chat history and query context
+    :return: relevant agent response
+    """
+
     temp_str = query.lower()
     if "admission" in temp_str or "concordia" in temp_str or "computer science" in temp_str:
         return handle_admission_query(query, context) # return agent's response

@@ -4,7 +4,7 @@ from memory.memory_manager import memory
 
 '''Multi Turn Chatbot Conversation'''
 
-# Initialize FastAPI appz
+# Initialize FastAPI app
 app = FastAPI()
 
 # Main chatbot logic
