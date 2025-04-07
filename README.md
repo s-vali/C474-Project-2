@@ -25,10 +25,10 @@ multi_agent_chatbot/
 ├── config/
 │   └── settings.py
 ├── docs/
-│   ├── technical_report.txt
-│   ├── execution_guide.txt
+│   ├── technical_report.pdf
+│   ├── execution_guide.pdf
 │   ├── requirements.txt
 │   ├── demo_video.mov
-│   └── performance_evaluation.txt
+│   └── performance_evaluation.pdf
 └── README.md
 ```
