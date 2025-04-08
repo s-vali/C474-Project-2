@@ -28,6 +28,7 @@ multi_agent_chatbot/
 │   ├── technical_report.pdf
 │   ├── execution_guide.pdf
 │   ├── requirements.txt
+│   ├── demo_video_link.pdf
 │   ├── demo_video.mov
 │   └── performance_evaluation.pdf
 └── README.md
