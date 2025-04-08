@@ -18,7 +18,7 @@ Answer: Let's think step by step.
 """
 
 # Instantiate the prompt
-prompt = PromptTemplate(input_variables=["input", "context"], template=template)
+prompt = PromptTemplate(input_variables=["input", "context", "knowledge_base"], template=template)
 
 # Chain everything together
 admission_chain = prompt | llm
@@ -32,9 +32,10 @@ def handle_admission_query(query: str, context: []) -> str:
     :return: agent's response to query
     """
 
-    print(f"this is admission_agent --> query: '{query}', context: '{context}'")
+    print(f"THIS IS ADMISSION_AGENT --> query: '{query}', context: '{context}'")
 
     # Try fetching additional context from Wikipedia
     knowledge = fetch_wikipedia_summary(query)
+    print("KNOWLEDGE: ", knowledge)
 
     return admission_chain.invoke({"input": query, "context": context, "knowledge_base": knowledge or "None"}) # field matches the input_variable defined in the PromptTemplate
