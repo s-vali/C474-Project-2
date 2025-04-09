@@ -5,3 +5,5 @@ wikipedia
 ollama
 langchain_ollama
 langchain-community
+chromadb
+sentence-transformers
