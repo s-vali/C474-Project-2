@@ -24,7 +24,7 @@ prompt = PromptTemplate(input_variables=["input", "context", "knowledge_base"], 
 general_chain = prompt | llm
 
 # Return LLM server response based on user query input
-def handle_general_query(query: str, context: []) -> str:
+def handle_general_query(query: str, context: str) -> str:
     """
     Return LLM response based on user query input for general input
     :param query: user query string
