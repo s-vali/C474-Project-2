@@ -4,7 +4,7 @@ from agents.admission_agent import handle_admission_query
 
 '''Routing to relevant agent'''
 
-def route_query(query: str, context: []):
+def route_query(query: str, context: str):
     """
     Handle routing to relevant agent to answer user's input
 

@@ -24,7 +24,7 @@ prompt = PromptTemplate(input_variables=["input", "context", "knowledge_base"], 
 admission_chain = prompt | llm
 
 # Return LLM server response based on user query input
-def handle_admission_query(query: str, context: []) -> str:
+def handle_admission_query(query: str, context: str) -> str:
     """
     Return LLM response based on user query input for Concordia Admissions
     :param query: user query string
